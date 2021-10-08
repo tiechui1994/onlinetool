@@ -14,7 +14,7 @@
     }
 </script>
 
-<style lang="css" rel="stylesheet/css">
+<style lang="less" rel="stylesheet/less">
     .headtop {
         background-color: #EFF2F7;
         height: 60px;

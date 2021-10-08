@@ -15,6 +15,6 @@
     }
 </script>
 
-<style lang="css">
-    @import "../style/common.css";
+<style lang="less" rel="stylesheet/less">
+    @import "../style/common";
 </style>

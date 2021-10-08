@@ -27,6 +27,6 @@
     }
 </script>
 
-<style lang="css">
-   @import "style/common.css";
+<style lang="less">
+   @import "style/common";
 </style>
