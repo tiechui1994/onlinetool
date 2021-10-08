@@ -20,7 +20,8 @@
                                :multiple="true" :limit="5">
                         <el-button class="raw-button">
                             <span class="button-text">
-                                <icon id="svg-plus2" :width="14" :height="14" class="button-prefix-icon"></icon>添加更多文件
+                                <icon id="svg-plus2" :width="14" :height="14"
+                                      class="button-prefix-icon"></icon>添加更多文件
                             </span>
                         </el-button>
                     </el-upload>
@@ -29,7 +30,8 @@
                 <div class="upload-convert">
                     <el-button class="raw-button">
                         <span class="button-text">
-                             转换<icon id="svg-submit-arrow" :width="20" :height="22" class="button-suffix-icon"></icon>
+                             转换<icon id="svg-submit-arrow" :width="20" :height="22"
+                                     class="button-suffix-icon"></icon>
                         </span>
                     </el-button>
                 </div>
@@ -74,20 +76,19 @@
     .image {
         .container {
             margin-left: 20px;
+            width: 80%;
         }
 
         .header {
             margin-top: 10px;
             margin-bottom: 10px;
-            margin-right: 10px;
+            border: 1px solid #e6e6e6;
+            border-radius: 2px;
+            border-left-width: 8px;
 
             .type-prompt {
-                width: 100%;
-                display: inline-block;
-
-                border: 2px solid #e6e6e6;
-                border-left-width: 8px;
-                padding: 15px 15px;
+                padding: 15px 0 15px 15px;
+                display: block;
                 font-size: 16px;
                 font-weight: 500;
             }
@@ -95,6 +96,7 @@
 
         .upload {
             display: flex;
+            border-radius: 4px;
             background-size: 24px 24px;
             background-color: #3c3c3c;
             background-image: linear-gradient(45deg, rgba(0, 0, 0, .06) 25%, transparent 0),
@@ -102,7 +104,6 @@
             linear-gradient(45deg, transparent 75%, rgba(0, 0, 0, .06) 0),
             linear-gradient(-45deg, transparent 75%, rgba(0, 0, 0, .06) 0);
             background-position: 0 0, 0 12px, 12px -12px, -12px 0;
-            max-width: 75%;
         }
 
         .upload .upload-file {
