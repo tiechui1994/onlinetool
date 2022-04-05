@@ -12,8 +12,8 @@
                         <i class="el-icon-link"></i><span class="nav-name">图片转换</span>
                     </el-menu-item>
 
-                    <el-menu-item index="coding">
-                        <i class="el-icon-link"></i><span class="nav-name">编码转换</span>
+                    <el-menu-item index="questions">
+                        <i class="el-icon-link"></i><span class="nav-name">SHL测试</span>
                     </el-menu-item>
                 </el-menu>
             </el-col>
