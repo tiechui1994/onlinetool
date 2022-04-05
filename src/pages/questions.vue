@@ -7,7 +7,7 @@
                     <el-image :src="item.url" fit="contain"></el-image>
                 </div>
                 <div>
-                    <el-button type="success" @click="toDst(item.category)">{{item.name}}</el-button>
+                    <el-button type="primary" @click="toDst(item.category)">{{item.name}}</el-button>
                 </div>
             </el-col>
         </el-row>
@@ -26,27 +26,27 @@
                 items: [{
                     name: '日历题目',
                     category: 'calendar',
-                    url: 'http://www.sidatiku.com/img/dtt/cover/calendar.webp',
+                    url: '/static/img/calendar.webp',
                 }, {
                     name: '比例题目',
                     category: 'percentage',
-                    url: 'http://www.sidatiku.com/img/dtt/cover/percentage.webp',
+                    url: '/static/img/percentage.webp',
                 }, {
                     name: '安排时间',
                     category: 'schedule',
-                    url: 'http://www.sidatiku.com/img/dtt/cover/schedule.webp',
+                    url: '/static/img/schedule.webp',
                 }, {
                     name: '找规律',
                     category: 'pattern',
-                    url: 'http://www.sidatiku.com/img/dtt/cover/pattern.webp',
+                    url: '/static/img/pattern.webp',
                 }, {
                     name: '排序题',
                     category: 'sorting',
-                    url: 'http://www.sidatiku.com/img/dtt/cover/sorting.webp',
+                    url: '/static/img/sorting.webp',
                 }, {
                     name: '记忆与其他',
                     category: 'memory',
-                    url: 'http://www.sidatiku.com/img/dtt/cover/memory.webp',
+                    url: '/static/img/memory.webp',
                 }]
             }
         },

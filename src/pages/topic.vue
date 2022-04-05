@@ -15,16 +15,16 @@
 
         <div class="content">
             <span class="span1">題目</span>
-            <img :src="'http://www.sidatiku.com/img/'+items[idx].questionImg+'.webp'"/>
+            <img :src="'/static/'+items[idx].questionImg+'.webp'"/>
             <span class="span2">答案</span>
-            <img :src="'http://www.sidatiku.com/img/'+items[idx].answerImg+'.webp'"/>
+            <img :src="'/static/'+items[idx].answerImg+'.webp'"/>
         </div>
 
     </div>
 </template>
 
 <script>
-    import {calendar, percentage, schedule, sorting, memory, pattern} from "../config/config"
+    import {calendar, percentage, schedule, sorting, memory, pattern} from "../config/local"
 
     export default {
         data() {
