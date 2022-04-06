@@ -7,7 +7,8 @@
         <div class="title">
             <ul v-for="(item, key) in items" :key="key">
                 <li @click="onclick(key)">
-                    <el-button v-if="key === idx" class="btn" type="success" size="mini">{{key+1}}</el-button>
+                    <el-button v-if="key === idx" class="btn" type="success" size="mini">{{key+1}}
+                    </el-button>
                     <el-button v-if="key !== idx" class="btn" size="mini">{{key+1}}</el-button>
                 </li>
             </ul>
@@ -15,9 +16,9 @@
 
         <div class="content">
             <span class="span1">題目</span>
-            <img :src="'/static/'+items[idx].questionImg+'.webp'"/>
+            <img :src="prefix+items[idx].questionImg+'.webp'"/>
             <span class="span2">答案</span>
-            <img :src="'/static/'+items[idx].answerImg+'.webp'"/>
+            <img :src="prefix+items[idx].answerImg+'.webp'"/>
         </div>
 
     </div>
@@ -29,6 +30,7 @@
     export default {
         data() {
             return {
+                prefix: 'https://cdn.jsdelivr.net/gh/tiechui1994/onlinetool@master/static/',
                 idx: -1,
                 items: [{
                     questionImg: "",
@@ -117,7 +119,7 @@
             }
 
             .btn {
-               padding: 7px !important;
+                padding: 7px !important;
             }
         }
         .content {

@@ -4,10 +4,11 @@
         <el-row :gutter="20">
             <el-col :span="6" :offset="1" v-for="(item,idx) in items" :key="idx" class="item">
                 <div class="image">
-                    <el-image :src="item.url" fit="contain"></el-image>
+                    <el-image :src="prefix+item.url" fit="contain"></el-image>
                 </div>
                 <div>
-                    <el-button type="primary" @click="toDst(item.category)">{{item.name}}</el-button>
+                    <el-button type="primary" @click="toDst(item.category)">{{item.name}}
+                    </el-button>
                 </div>
             </el-col>
         </el-row>
@@ -23,6 +24,7 @@
         },
         data() {
             return {
+                prefix: 'https://cdn.jsdelivr.net/gh/tiechui1994/onlinetool@master',
                 items: [{
                     name: '日历题目',
                     category: 'calendar',
