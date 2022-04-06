@@ -1,13 +1,14 @@
 <template>
     <div class="questions">
         <head-top></head-top>
-        <el-row :gutter="20">
-            <el-col :span="6" :offset="1" v-for="(item,idx) in items" :key="idx" class="item">
+        <el-row align="middle">
+            <el-col :span="span" v-for="(item,idx) in items" :key="idx" class="item">
                 <div class="image">
                     <el-image :src="prefix+item.url" fit="contain"></el-image>
                 </div>
-                <div>
-                    <el-button type="primary" @click="toDst(item.category)">{{item.name}}
+                <div class="btn">
+                    <el-button type="primary" :size="btnsize" @click="toDst(item.category)">
+                        {{item.name}}
                     </el-button>
                 </div>
             </el-col>
@@ -24,6 +25,8 @@
         },
         data() {
             return {
+                span: 8,
+                btnsize: "media",
                 prefix: 'https://cdn.jsdelivr.net/gh/tiechui1994/onlinetool@master',
                 items: [{
                     name: '日历题目',
@@ -52,6 +55,18 @@
                 }]
             }
         },
+        created() {
+            const isMobile = navigator.userAgent.match(
+                /(phone|pad|pod|iPhone|iPod|ios|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i
+            );
+            if (isMobile) {
+                this.span = 12;
+                this.btnsize = "small"
+            } else {
+                this.span = 8;
+                this.btnsize = "media"
+            }
+        },
         methods: {
             toDst: function (category) {
                 this.$router.push({
@@ -69,17 +84,31 @@
     }
 </script>
 
-<style scoped lang="less">
+<style scoped lang="less" rel="stylesheet/less">
+    @import "../style/const";
+
     .questions {
         .item {
             text-align: center;
-            margin-top: 20px;
+            padding-top: 15px;
         }
 
         .image {
             display: inline-block;
-            width: 200px;
-            height: 200px;
+
+            @media @mobile {
+                width: 100px;
+                height: 100px;
+            }
+
+            @media @web {
+                width: 200px;
+                height: 200px;
+            }
+
+            .el-image {
+                overflow: unset;
+            }
         }
 
         img {
