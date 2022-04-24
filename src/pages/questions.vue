@@ -27,7 +27,7 @@
             return {
                 span: 8,
                 btnsize: "media",
-                prefix: 'https://cdn.jsdelivr.net/gh/tiechui1994/onlinetool@master',
+                prefix: 'https://gitcode.net/tiechui1994/onlinetool/-/raw/master',
                 items: [{
                     name: '日历题目',
                     category: 'calendar',

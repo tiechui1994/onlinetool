@@ -33,7 +33,7 @@
     export default {
         data() {
             return {
-                prefix: 'https://cdn.jsdelivr.net/gh/tiechui1994/onlinetool@master/static/',
+                prefix: 'https://gitcode.net/tiechui1994/onlinetool/-/raw/master/static/',
                 idx: -1,
                 search: "",
                 items: [{
