@@ -8,12 +8,19 @@ const image = r => require.ensure([], () => r(require('@/pages/image')), 'image'
 const questions = r => require.ensure([], () => r(require('@/pages/questions')), 'questions');
 const topic = r => require.ensure([], () => r(require('@/pages/topic')), 'topic');
 
+const echart = r => require.ensure([], () => r(require('@/pages/echart')), 'echart');
+
 Vue.use(Router);
 
 const routes = [
     {
         path: '/',
         component: index,
+    },
+    {
+        path: '/echart',
+        name: 'echart',
+        component: echart,
     },
     {
         path: '/questions/topic',
